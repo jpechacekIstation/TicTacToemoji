@@ -19,7 +19,7 @@ td {
     width: 30%;
     text-align: center;
     vertical-align: middle;
-    font-family: 'Noto Color Emoji', 'Segoe UI Emoji';
+    font-family: 'Noto Color Emoji', sans-serif;
     font-size: 10cqw;
     cursor: pointer;
     background-color: none;
@@ -111,7 +111,7 @@ table tr td:last-child {
 }
 
 select, option {
-    font-family: 'Noto Color Emoji', 'Segoe UI Emoji';
+    font-family: 'Noto Color Emoji', sans-serif;
     font-size: 2rem;
     padding: .5rem .25rem;
 }
