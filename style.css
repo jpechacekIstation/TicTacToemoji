@@ -1,0 +1,149 @@
+:root {
+    --button-shadow: rgb(0, 155, 255);
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(51, 51, 51);
+}
+
+td {
+    border: .3rem solid rgb(216, 216, 216);
+    height: 30%;
+    width: 30%;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Noto Color Emoji', sans-serif;
+    font-size: 10cqw;
+    cursor: pointer;
+    background-color: none;
+    transition: 400ms font-size cubic-bezier(.29,1.57,.5,.86);
+}
+
+td:not(.cell-filled):hover {
+    background-color: rgba(255, 255, 255, .15);
+}
+
+td:not(.cell-filled):active {
+    background-color: rgba(0, 0, 0, .15);
+}
+
+td:not(.cell-filled) {
+    font-size: 0cqw;
+}
+
+.cell-filled {
+    cursor: not-allowed;
+    background-color: none;
+    font-size: 10cqw;
+}
+
+.cell-non-important {
+    filter: blur(1rem);
+}
+
+table {
+    border-collapse: collapse;
+    aspect-ratio: 1 / 1;
+    width: 50%;
+}
+
+table tr:first-child td {
+    border-top: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:first-child {
+    border-left: 0;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+.boardDisabler {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    cursor: wait;
+}
+
+.endgame {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .75);
+    position: fixed;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    color: white;
+    font-size: 3rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    animation: 500ms forwards fadeIn ease-in-out;
+    filter: blur(1rem);
+}
+
+.selectCharMenu {
+    display: flex;
+    position: fixed;
+    gap: 2rem;
+    top: 1rem;
+}
+
+.selectCharMenu {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+select, option {
+    font-family: 'Noto Color Emoji', sans-serif;
+    font-size: 2rem;
+    padding: .5rem .25rem;
+}
+
+button {
+    background-color: rgb(51, 51, 51);
+    border: .2rem solid white;
+    border-radius: 5rem;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    font-size: x-large;
+    padding: .5rem 2rem;
+    transition: 100ms all ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    transform: translateY(-.2rem);
+    filter: drop-shadow(0 .5rem .5rem var(--button-shadow));
+}
+
+button:active {
+    background-color: black;
+    color: white;
+    transform: translateY(.1rem);
+    filter: drop-shadow(0 0 1rem var(--button-shadow));
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
