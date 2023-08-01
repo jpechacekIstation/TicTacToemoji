@@ -52,6 +52,7 @@ table {
     border-collapse: collapse;
     aspect-ratio: 1 / 1;
     width: 50%;
+    height: 50%;
 }
 
 table tr:first-child td {
