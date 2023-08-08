@@ -93,6 +93,7 @@ function startGame() {
     origBoard = Array.from(Array(9).keys());
     for (var i = 0; i < cells.length; i++) {
         cells[i].style.filter = "none";
+        cells[i].style.filter = "drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5))";
         cells[i].removeEventListener('click', turnClick, false);
         cells[i].classList.remove("cell-filled");
         cells[i].innerText = '';
